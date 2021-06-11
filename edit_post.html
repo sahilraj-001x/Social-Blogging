@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>update password</title>
+</head>
+<style>
+body {
+  height: 1000px;
+  background-image: linear-gradient(to bottom right, #ff4e50,#f9d423);
+}
+  .but{
+background-color:orange;
+cursor:pointer;
+border:1px solid purple;
+border-radius:6px
+}
+.but span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.but span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.but:hover span {
+  padding-right: 25px;
+}
+.but:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+input {
+  height: 20px;
+  width: 75%;
+}
+</style>
+<body>
+<form action="/edit_post" method="post">
+  <p style="text-align:center; font-size:38px; font-family:trebuchetms">
+    Edit your post
+  </p>
+    <p style="text-align:center; color:red; font-size:25px">{{info}}</p>
+  <p style = "margin-top: 5%; border:1px solid black;text-align:center;margin-left:30%; margin-right:30%; border-radius:5px;padding:10px; font-size:30px">
+  <input type="text" name='title_old' required style="border-radius:3px; font-size:30px; padding-bottom:6px; padding-top:6px" placeholder="current title of the post">
+  </p>
+  <p style = "margin-top: 5%; border:1px solid black;text-align:center;margin-left:30%; margin-right:30%; border-radius:5px;padding:10px; font-size:30px">
+  <input type="text" name='title_new' required style="border-radius:3px; font-size:30px; padding-bottom:6px; padding-top:6px" placeholder="new title of the post">
+  </p>
+  <p style = "margin-top: 5%; border:1px solid black;text-align:center;margin-left:30%; margin-right:30%; border-radius:5px;padding:10px; font-size:30px">
+  <input type="text" name='post_new' required style="border-radius:3px; font-size:30px; padding-bottom:6px; padding-top:6px" placeholder="editted post">
+  </p>
+    <br>
+<p style="text-align:center">
+    <button type="submit" style="text-align:center; font-size:120%;" class="but"><span>Confirm</span></button>
+    <button type="reset" style="text-align:center; font-size:117%;" class="but"><span>Cancel</span></button>
+</p>
+</form>
+</body>
+</html>

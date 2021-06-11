@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post Title</title>
+</head>
+<body>
+    <p style = "border :1px solid; border-color:teal;">
+        {%for title in title%}
+            <p  class="border1" style="font-size:25px; ; width:55%; margin-left:25%;font-family:trebuchetms;">
+                    <a href="/all_posts">
+                        {{title}}
+                    </a>
+                    <br>
+                </p>
+            <p style = "border :1px solid; border-color:teal;">
+        {%endfor%}
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post details</title>
+</head>
+<style>
+input {
+    margin-left:32%;
+}
+</style>
+<body>
+    <p style = "border :1px solid; border-color:teal;">
+        {%for post in post%}
+            <p  class="border1" style="font-size:25px; ; width:55%; margin-left:25%;font-family:trebuchetms;">
+                {{post}}
+                </p>
+            <p style = "border :1px solid; border-color:teal;">
+        {%endfor%}
+    </body>
+</html>

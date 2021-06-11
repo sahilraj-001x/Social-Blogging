@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Profile</title>
+</head>
+<style>
+body {
+    font-family: "Times New Roman", Times, serif;
+    background-image: linear-gradient(to bottom right, #d9a7c7, #fffcdc);
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+}
+.img1{
+  opacity : 0.8;
+}
+p.border1 {
+  border: 8px solid orchid;
+  border-radius: 20px 20px 20px 20px;
+  text-align:center;
+  font-size:40px;
+  border-left-padding:10%;
+}
+.but{
+background-color:lightblue;
+cursor:pointer;
+border:1px solid purple;
+border-radius:6px
+}
+.but span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.but span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.but:hover span {
+  padding-right: 25px;
+}
+.but:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+<body>
+<form method="post">
+    <p style="padding-left:35%">
+<!--    <input type="text" placeholder="search username" style="padding-right:18%; border-radius:3px; font-size:18px; border-color:teal" width="20px" name="searchusername">-->
+<!--    <button type="submit" style="text-align:center; font-size:100%;" class="but"><span>Search</span></button>-->
+    </p>
+    </form>
+    <div class="container">
+    <p style="word-spacing:60px; padding-left:5%;">
+    <a href="/change_password" style="color:grey; font-size:20px">Password</a>
+    <a href="/newuserlogin" style="color:grey; font-size:20px">Newuser</a>
+    <a href="/" style="color:grey; font-size:20px">Login</a>
+    <a href="/search_url" style="color:grey; font-size:20px">Search</a>
+    <a href="/log_out" style="color:grey; font-size:20px">Log-out</a>
+    <a href="/about_me" style="color:grey; font-size:20px">About_Me</a>
+    </p>
+<img src="{{ pic }}" height="690" width="100%" style="" class="img1">
+    <div class="centered" style="font-size:45px">
+        <h2>Homepage</h2>
+    </div>
+    </div>
+    </div>
+<p style = "border :1px solid; border-color:teal;"></p>
+<u style="color:brown"><p style="padding-left:25%; font-family:trebuchetms; font-size:35px; color:brown">Global Posts From the Authors</p></u>
+    {%for auther in auther%}
+        <p class="border1" style="font:size:40px; width:55%; margin-left:25%;font-family:trebuchetms;">
+            <a href="/post_details" style="color:blue">
+                {{auther}}
+            </a>
+        </p>
+    {%endfor%}
+</body>
+</html>

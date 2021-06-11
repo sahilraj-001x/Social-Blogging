@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Page</title>
+</head>
+<style>
+body {
+  font-family: "Times New Roman", Times, serif;
+  background-image: linear-gradient(to bottom right, #d9a7c7, #fffcdc);
+}
+.dot {
+  height: 90px;
+  width: 90px;
+  background-color: #bbb;
+  border-radius: 50%;
+  text-
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.img1{
+  opacity : 0.7;
+}
+p.border1 {
+  border: 2px solid black;
+  border-radius: 5px;
+  text-align:center;
+  font-size:40px;
+  border-left-padding:10%;
+  background-color:#FFEBCD;
+}
+.ab{
+  padding-left:85%;
+}
+.but{
+background-color:lightgreen;
+cursor:pointer;
+border:1px solid purple;
+border-radius:6px
+}
+.but span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.but span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.but:hover span {
+  padding-right: 25px;
+}
+.but:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+<body>
+<div class="container">
+        <img src="{{ pic }}" height="600" width="90%" style="padding-top:30px; padding-left:25px" class="img1">
+    <div class="centered" style="font-size:45px">
+        <h1>Your Blog</h1>
+    </div>
+</div>
+<p style = "border :1px solid; border-color:teal;">
+</p>
+<p style="color:blue; font-size:40px;">
+    Welcome {{name1}}<a href="/homepage" style="text-align:right; font-size:25px; padding-left:5%; color:orange">Homepage</a>
+</p>
+<a href="/delete_post">
+<button type="submit" style="text-align:right; font-size:27px;" class="but"><span>Delete Post</span></button>
+</a>
+<a href="/edit_post">
+<button type="submit" style="text-align:right; font-size:27px; margin-left:10px" class="but"><span>Edit Post</span></button>
+</a>
+<div>
+    <a href="/users_posts_page">
+        <img src="{{ pic1 }}" alt="Add Post" height="90" width="90" class="ab">
+    </a>
+    <p style="padding-left:43%; font-size:30px; color:brown">
+        Your Post History
+    </p>
+    <p class="border1" style="font:size:40px; width:55%; margin-left:23%;">
+            {%for title in title%}
+                {{title}}
+                    <p class="border1" style="font:size:40px; width:55%; margin-left:23%;">
+            {%endfor%}
+        </p>
+    {%for post in post%}
+        <p class="border1" style="font:size:40px; width:55%; margin-left:23%;">
+<!--            <a href="/all_posts" style="color:#191970">-->
+                {{post}}
+<!--            </a>-->
+        </p>
+    {%endfor%}
+<!--    <p style="text-align:center">-->
+<!--        {%for post in post%}-->
+<!--            {{post}}-->
+<!--        {%endfor%}-->
+<!--    </p>-->
+</div>
+</body>
+</html>

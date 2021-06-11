@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search</title>
+</head>
+<style>
+body {
+  height: 1000px;
+  background-image: linear-gradient(to bottom right, #ff4e50,#f9d423);
+}
+  .but{
+background-color:orange;
+cursor:pointer;
+border:1px solid purple;
+border-radius:6px
+}
+.but span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.but span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.but:hover span {
+  padding-right: 25px;
+}
+.but:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+input{
+  height:25px;
+  width:240px
+}
+</style>
+<body>
+<form action="/search_url" method="post" style="">
+  <p style="text-align:center; font-size:33px">
+    Search anything
+  </p>
+    <p style="font-size:25px; padding-top:20px; font-family:trebuchetms;">
+        Title :
+    </p>
+    <p style="text-align:center; color:white; font-size:25px; text-align:center; font-family:trebuchetms">{{title}}</p>
+    <p style="font-size:25px; font-family:trebuchetms">
+        Description :
+    </p>
+    <p style="text-align:center; color:white; font-size:25px; padding-left:60px; padding-right:40px; font-family:trebuchetms">{{description}}</p>
+    <p style="font-size:25px; font-family:trebuchetms">
+        Click here for image :
+    </p>
+    <a href="{{image}}" style="color:white">
+    <p style="text-align:center; color:white; font-size:25px; text-align:center; font-family:trebuchetms">{{image}}</p>
+    </a>
+    <p style="font-size:25px; font-family:trebuchetms">
+        More imformation :
+    </p>
+    <a href="{{url}}" style="color:white">
+    <p style="text-align:center; color:white; font-size:25px; text-align:center; font-family:trebuchetms">{{url}}</p>
+    </a>
+  <p style = "margin-top: 5%; border:1px solid black; margin-left :36%; margin-right :36%; border-radius:5px;padding:10px; font-size:30px">
+   URL :<input type="url" name='srch' required style="border-color:none;border-radius:3px; font-size:20px" placeholder="http://www.example.com" hspace="20px">
+  </p>
+<!--<p style="text-align:center">-->
+    <button type="submit" style="text-align:center; font-size:100%; margin-left:41%" class="but"><span>Confirm</span></button>
+    <button type="reset" style="text-align:center; font-size:95.9%; margin-left:8%" class="but"><span>Cancel</span></button>
+    <a href="/homepage" style="font-size:18px; padding-left:48%">Homepage</a>
+<!--</p>-->
+</form>
+</body>
+</html>

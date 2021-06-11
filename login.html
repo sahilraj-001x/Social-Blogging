@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+<style>
+body {
+  height: 1000px;
+  background-image: linear-gradient(to bottom right, #ff4e50,#f9d423);
+}
+.but{
+background-color:orange;
+cursor:pointer;
+border:1px solid purple;
+border-radius:6px
+}
+.but span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.but span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.but:hover span {
+  padding-right: 25px;
+}
+.but:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+<body>
+<p style ="font-size:50px; text-align:center">
+      <br>
+      <br>
+        Login- Page
+    <p style="text-align:center; font-size:20px; color:red; bgcolor:black">
+{{info}}
+    </p>
+</p>
+      <form method="post" style="text-align:center; font-size:20px">
+        <p style = "margin-top: 5%; border:1px solid black; margin-left :38%; margin-right :38%; border-radius:5px;padding:10px">
+    Username: <input type="text" name='username' required style="background-color:#40E0D0; border-color:none;border-radius:3px; font-size:15px">
+        </p>
+        <p style = "margin-top: 5%; border:1px solid black; margin-left :38%; margin-right :38%; border-radius:5px;padding:10px">
+    Password: <input type="password" name='password' required style="background-color:#40E0D0; border-color:none;border-radius:3px; font-size:15px">
+            </p>
+          <a href="/homepage" style="font-size:18px; padding-right:70px">Homepage</a>
+           <a href="/change_password" style="font-size:18px; padding-left:70px">Forgot Password</a>
+        <br>
+          <br>
+      <button type="submit" style="text-align:center; font-size:100%;" class="but"><span>Login</span></button>
+      <button type="reset" style="text-align:center; font-size:95.9%;" class="but"><span>Cancel</span></button>
+          <br>
+      </form>
+<p style="font-size:20px">
+    Have'nt registed yet
+    <a href="/newuserlogin" style="color:darkpink">click here</a>
+</p>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>New User Login Page</title>
+</head>
+<style>
+body {
+  height: 1000px;
+  background-image: linear-gradient(to bottom right, #ff4e50,#f9d423);
+}
+.but{
+background-color:orange;
+cursor:pointer;
+border:1px solid purple;
+border-radius:6px
+}
+.but span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.but span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.but:hover span {
+  padding-right: 25px;
+}
+.but:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.img1{
+  opacity : 0.6;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+}
+</style>
+<body>
+    <img src="{{ pic }}" height="690" width="100%" style="" class="img1">
+    <div class="centered" style="font-size:45px; color:white">
+        <h2>New User Login Page</h2>
+    </div>
+      <form method="post" style="text-align:center">
+          <p style = "margin-top: 5%; border:1px solid black; margin-left :35%; margin-right :35%; border-radius:5px;padding:10px; font-size:150%">
+        Username :<input type="text" maxlength="20" name="username1" required style="background-color:#40E0D0; border-color:none;border-radius:3px; font-size:15px">
+          </p>
+          <p style = "margin-top: 5%; border:1px solid black; margin-left :35%; margin-right :35%; border-radius:5px;padding:10px; font-size:150%">
+        Password :<input type="password" maxlength="30" name="password1" required style="background-color:#40E0D0; border-color:none;border-radius:3px; font-size:15px">
+          </p>
+          <p style = "margin-top: 5%; border:1px solid black; margin-left :35%; margin-right :35%; border-radius:5px;padding:10px; font-size:150%">
+        Email :<input type="email" maxlength="100" name="email" required style="background-color:#40E0D0; border-color:none;border-radius:3px; font-size:15px">
+          </p>
+          <p style = "margin-top: 5%; border:1px solid black; margin-left :35%; margin-right :35%; border-radius:5px;padding:10px; font-size:150%">
+        Age :<input type="number" maxlength="2" name="age" required style="background-color:#40E0D0; border-color:none;border-radius:3px; font-size:15px">
+          </p>
+          <br>
+          <br>
+          <button type="submit" style="text-align:center; font-size:120%;" class="but"><span>Submit</span></button>
+          <button type="reset" style="text-align:center; font-size:116.9%;" class="but"><span>Cancel</span></button>
+      </form>
+<p style="font-size:21px">
+    Already a user log-in here <a href="/" style="color: gold">login here</a>
+</p>
+</body>
+</html>
